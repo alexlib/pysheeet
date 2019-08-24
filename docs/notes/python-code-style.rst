@@ -66,7 +66,11 @@ Good
     var_ = "single_trailing_underscore_"
 
     # a class attribute (private use in class)
+<<<<<<< HEAD
     var = " __double_leading_underscore"
+=======
+    __var = " __double_leading_underscore"
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 
     # "magic" objects or attributes, ex: __init__
     __name__

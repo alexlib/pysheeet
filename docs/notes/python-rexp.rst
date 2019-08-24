@@ -67,6 +67,12 @@ Compare HTML tags
     >>> re.findall('</[^>]+>', html)[0:2]
     ['</script>', '</title>']
     >>> print("self-closing tags")
+<<<<<<< HEAD
+=======
+    self-closing tags
+    >>> re.findall('<[^/>]+/>', html)[0:2]
+    []
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 
 Group Comparison
 ----------------

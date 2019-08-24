@@ -90,7 +90,11 @@ b contains a
 
     >>> a = set([1, 2])
     >>> b = set([1, 2, 5, 6])
+<<<<<<< HEAD
     >>> a <=b
+=======
+    >>> a <= b
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
     True
 
 a contains b

@@ -54,7 +54,10 @@ only includes basic Python features but also data structures and algorithms.
    notes/python-dict
    notes/python-func
    notes/python-object
+<<<<<<< HEAD
    notes/python-iterator
+=======
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
    notes/python-generator
    notes/python-typing
    notes/python-io
@@ -75,6 +78,10 @@ modules usages.
    notes/python-concurrency
    notes/python-sqlalchemy
    notes/python-security
+<<<<<<< HEAD
+=======
+   notes/python-ssh
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
    notes/python-aws
    notes/python-tests
    notes/python-c-extensions

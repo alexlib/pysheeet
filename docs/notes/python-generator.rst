@@ -569,7 +569,11 @@ What ``@contextmanager`` actually doing?
 
     class GeneratorCM(object):
 
+<<<<<<< HEAD
         def __init__(self,gen):
+=======
+        def __init__(self, gen):
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
             self._gen = gen
 
         def __enter__(self):
@@ -880,7 +884,11 @@ Simple round-robin with blocking
                 pass
 
     def server():
+<<<<<<< HEAD
         host = ('localhost',5566)
+=======
+        host = ('localhost', 5566)
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind(host)
@@ -924,7 +932,11 @@ simple round-robin with blocking and non-blocking
         while any([tasks, w_read, w_send]):
             while not tasks:
                 # polling tasks
+<<<<<<< HEAD
                 can_r,can_s,_ = select(w_read, w_send,[])
+=======
+                can_r,can_s,_ = select(w_read, w_send, [])
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
                 for _r in can_r:
                     tasks.append(w_read.pop(_r))
                 for _w in can_s:
@@ -956,7 +968,11 @@ simple round-robin with blocking and non-blocking
     tasks.append(g_fib(15))
 
     def server():
+<<<<<<< HEAD
         host = ('localhost',5566)
+=======
+        host = ('localhost', 5566)
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind(host)

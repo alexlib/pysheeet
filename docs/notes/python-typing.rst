@@ -6,6 +6,18 @@
 Typing
 ======
 
+<<<<<<< HEAD
+=======
+PEP `484 <https://www.python.org/dev/peps/pep-0484/>`_, which provides a
+specification about what a type system should look like in Python3, introduced
+the concept of type hints. Moreover, to better understand the type hints design
+philosophy, it is crucial to read PEP `483 <https://www.python.org/dev/peps/pep-0483/>`_
+that would be helpful to aid a pythoneer to understand reasons why Python
+introduce a type system. The main goal of this cheat sheet is to show some
+common usage about type hints in Python3.
+
+
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 .. contents:: Table of Contents
     :backlinks: none
 
@@ -110,7 +122,11 @@ Basic types
     var_float: float = 1.
     var_unicode: Text = u'\u2713'
 
+<<<<<<< HEAD
     # cound be none
+=======
+    # could be none
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
     var_could_be_none: Optional[int] = None
     var_could_be_none = 1
 

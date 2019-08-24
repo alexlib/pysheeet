@@ -68,7 +68,11 @@ What is Task?
     class Task(Future):
         """Simple prototype of Task"""
 
+<<<<<<< HEAD
         def __init__(self, gen, *,loop):
+=======
+        def __init__(self, gen, *, loop):
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
             super().__init__(loop=loop)
             self._gen = gen
             self._loop.call_soon(self._step)
@@ -256,10 +260,17 @@ How does ``asyncio.wait`` work?
     try:
         print("---> wait")
         loop.run_until_complete(
+<<<<<<< HEAD
                 wait([slow_task(_) for _ in range(1,3)]))
         print("---> asyncio.wait")
         loop.run_until_complete(
                 asyncio.wait([slow_task(_) for _ in range(1,3)]))
+=======
+                wait([slow_task(_) for _ in range(1, 3)]))
+        print("---> asyncio.wait")
+        loop.run_until_complete(
+                asyncio.wait([slow_task(_) for _ in range(1, 3)]))
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
     finally:
         loop.close()
 
@@ -317,7 +328,11 @@ How does ``loop.sock_*`` work?
             fut.set_result((conn, addr))
         return fut
 
+<<<<<<< HEAD
     def sock_recv(self, sock, n , fut=None, registed=False):
+=======
+    def sock_recv(self, sock, n, fut=None, registed=False):
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
         fd = sock.fileno()
         if fut is None:
             fut = self.create_future()
@@ -326,7 +341,11 @@ How does ``loop.sock_*`` work?
         try:
             data = sock.recv(n)
         except (BlockingIOError, InterruptedError):
+<<<<<<< HEAD
             self.add_reader(fd, self.sock_recv, sock, n ,fut, True)
+=======
+            self.add_reader(fd, self.sock_recv, sock, n, fut, True)
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
         except Exception as e:
             fut.set_exception(e)
         else:

@@ -15,7 +15,11 @@ for characters. The numeric values only define 128 characters originally,
 so ASCII only contains control codes, digits, lowercase letters, uppercase
 letters, etc. However, it is not enough for us to represent characters such as
 accented characters, Chinese characters, or emoji existed around the world.
+<<<<<<< HEAD
 Therefore, **Unicode** was developed to solve this issues. It defines the
+=======
+Therefore, **Unicode** was developed to solve this issue. It defines the
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 *code point* to represent various characters like ASCII but the number of
 characters is up to 1,111,998.
 
@@ -99,6 +103,7 @@ a string is always equivalent to the number of characters.
     >>> len(bs)
     5
 
+<<<<<<< HEAD
 Unicode Code Point
 ------------------
 
@@ -137,6 +142,75 @@ A *Unicode code point* transfers to a *byte string* is called encoding.
 Decodeing
 ---------
 
+=======
+Porting unicode(s, 'utf-8')
+---------------------------
+
+The `unicode() <https://docs.python.org/2.7/library/functions.html#unicode>`_
+built-in function was removed in Python 3 so what is the best way to convert
+the expression ``unicode(s, 'utf-8')`` so it works in both Python 2 and 3?
+
+In Python 2:
+
+.. code-block:: python
+
+    >>> s = 'Café'
+    >>> unicode(s, 'utf-8')
+    u'Caf\xe9'
+    >>> s.decode('utf-8')
+    u'Caf\xe9'
+    >>> unicode(s, 'utf-8') == s.decode('utf-8')
+    True
+
+In Python 3:
+
+.. code-block:: python
+
+    >>> s = 'Café'
+    >>> s.decode('utf-8')
+    AttributeError: 'str' object has no attribute 'decode'
+
+So, the real answer is...
+
+Unicode Code Point
+------------------
+
+`ord <https://docs.python.org/3/library/functions.html#ord>`_ is a powerful
+built-in function to get a Unicode code point from a given character.
+Consequently, If we want to check a Unicode code point of a character, we can
+use ``ord``.
+
+.. code-block:: python
+
+    >>> s = u'Café'
+    >>> for _c in s: print('U+%04x' % ord(_c))
+    ...
+    U+0043
+    U+0061
+    U+0066
+    U+00e9
+    >>> u = '中文'
+    >>> for _c in u: print('U+%04x' % ord(_c))
+    ...
+    U+4e2d
+    U+6587
+
+
+Encoding
+--------
+
+A *Unicode code point* transfers to a *byte string* is called encoding.
+
+.. code-block:: python
+
+    >>> s = u'Café'
+    >>> type(s.encode('utf-8'))
+    <class 'bytes'>
+
+Decodeing
+---------
+
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 A *byte string* transfers to a *Unicode code point* is called encoding.
 
 .. code-block:: python

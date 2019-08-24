@@ -48,7 +48,10 @@ Cheat Sheet
 - `Dictionary <docs/notes/python-dict.rst>`_
 - `Function <docs/notes/python-func.rst>`_
 - `Class <docs/notes/python-object.rst>`_
+<<<<<<< HEAD
 - `Iterator <docs/notes/python-iterator.rst>`_
+=======
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 - `Generator <docs/notes/python-generator.rst>`_
 - `Typing <docs/notes/python-typing.rst>`_
 - `File <docs/notes/python-io.rst>`_
@@ -63,6 +66,10 @@ Advanced Cheat Sheet
 - `Concurrency <docs/notes/python-concurrency.rst>`_
 - `Sqlalchemy <docs/notes/python-sqlalchemy.rst>`_
 - `Security <docs/notes/python-security.rst>`_
+<<<<<<< HEAD
+=======
+- `SSH <docs/notes/python-ssh.rst>`_
+>>>>>>> 5250bd678d7615ad45acec05da327ab93a387e9d
 - `Boto3 <docs/notes/python-aws.rst>`_
 - `Tests <docs/notes/python-tests.rst>`_
 - `C Extensions <docs/notes/python-c-extensions.rst>`_
